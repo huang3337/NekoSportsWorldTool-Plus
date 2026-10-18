@@ -536,6 +536,19 @@ impl App {
                         crate::platform::InputKind::Text,
                         70.0,
                     );
+                    // 同步有效输入；编辑中的空值或无效值保留原样，不打断输入。
+                    if let Some(total_m) = page
+                        .custom_track_length
+                        .parse::<u32>()
+                        .ok()
+                        .filter(|length| (100..=1000).contains(length))
+                    {
+                        let spec = crate::track::stadium::TrackSpec::Custom { total_m };
+                        if page.track_spec != spec {
+                            page.track_spec = spec;
+                            ui.ctx().request_repaint();
+                        }
+                    }
                     ui.label("100-1000 米");
                 }
             });
