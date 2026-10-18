@@ -3,12 +3,23 @@
 # NekoSportsWorldTool-Plus
 
 ![Release](https://img.shields.io/github/v/release/Erfan817/NekoSportsWorldTool-Plus)
+![Downloads](https://img.shields.io/github/downloads/Erfan817/NekoSportsWorldTool-Plus/total)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)
 ![Base](https://img.shields.io/badge/upstream-YanamiNeko%2FNekoSportsWorldTool-blueviolet)
 
 运动世界校园版全协议自动化工具，纯 Rust 单文件，GUI / CLI 双模式。
 
 > ⚠️ 仅供学习研究，请勿用于违反学校规定的场景，后果自负。
+
+## 下载
+
+Windows x64 可执行文件见 [Releases](https://github.com/Erfan817/NekoSportsWorldTool-Plus/releases/latest)：
+
+- `nekosportsworldtool-v0.4.2.exe` — 下载后重命名为 `nekosportsworldtool.exe` 使用
+- 首次使用请保留同目录下的 `config.json` / `identity.json` / `points_cache.json`
+  （`identity.json` 是设备身份，删掉等于换新设备，会触发 10121 风控）
+
+其他平台请自行按下方「构建」一节编译。
 
 ## 关于本项目
 
